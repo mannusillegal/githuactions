@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-#     - uses: actions/checkout@v2
-#     - name: Build the Docker image
-#       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-    - name: build and push
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: suraj665/sings665
